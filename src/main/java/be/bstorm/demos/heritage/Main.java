@@ -1,5 +1,7 @@
 package be.bstorm.demos.heritage;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,5 +37,10 @@ public class Main {
             System.out.println(v.toString());
             v.seDeplacer();
         }
+
+        LocalDateTime date = LocalDateTime.now();
+
+        String result = date.format(DateTimeFormatter.ofPattern("dd MMMM yyyy à HH : mm"));
+        System.out.println(result);
     }
 }
