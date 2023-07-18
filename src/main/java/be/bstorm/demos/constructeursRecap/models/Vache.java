@@ -38,6 +38,12 @@ public class Vache extends Herbivore{
         System.out.println("Meuuuuuuuuuuuuuuuuuuuuuuuuuuh");
     }
 
+    @Override
+    public String toString() {
+        return "Vache : " +
+                super.toString() +
+                "\nestTachetee=" + estTachetee ;
+    }
 
     //endregion
 }

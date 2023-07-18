@@ -33,4 +33,14 @@ public class Carnivore extends Animal{
 
 
     //endregion
+
+    //region Méthode
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nestNocturne=" + estNocturne;
+    }
+
+
+    //endregion
 }

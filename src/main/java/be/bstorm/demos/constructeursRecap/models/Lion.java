@@ -36,6 +36,12 @@ public class Lion extends Carnivore{
         System.out.println("RRRRRRRrrrrrrrrrrrrrr");
     }
 
+    @Override
+    public String toString() {
+        return "Lion : " +
+                super.toString() +
+                "\ncouleurCriniere='" + couleurCriniere ;
+    }
 
     //endregion
 }

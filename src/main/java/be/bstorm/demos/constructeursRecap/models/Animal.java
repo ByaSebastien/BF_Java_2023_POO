@@ -71,5 +71,12 @@ public class Animal {
         System.out.println("Je sais pas encore ce que je suis!");
     }
 
+    @Override
+    public String toString() {
+        return  "\nname='" + name + '\'' +
+                "\nsize=" + size +
+                "\nweight=" + weight;
+    }
+
     //endregion
 }

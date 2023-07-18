@@ -37,6 +37,13 @@ public class Loup extends Carnivore{
         System.out.println("Ahouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
     }
 
+    @Override
+    public String toString() {
+        return "Loup : " +
+                super.toString() +
+                "\nestSolitaire=" + estSolitaire;
+
+    }
 
     //endregion
 }

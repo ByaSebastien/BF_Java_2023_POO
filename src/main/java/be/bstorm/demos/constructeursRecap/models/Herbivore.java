@@ -29,4 +29,14 @@ public class Herbivore extends Animal{
 
 
     //endregion
+
+    //region Méthodes
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nregion='" + region ;
+    }
+
+
+    //endregion
 }

@@ -37,6 +37,12 @@ public class Ane extends Herbivore{
         System.out.println("Hihan");
     }
 
+    @Override
+    public String toString() {
+        return "Ane : " +
+                super.toString() +
+                "\nestTetu=" + estTetu;
+    }
 
     //endregion
 }
