@@ -12,9 +12,9 @@ public class Animal {
 
     //region constructeurs
     public Animal(String paramName, int paramWeight, int paramSize){
-        this.name = paramName;
-        this.weight = paramWeight;
-        this.size = paramSize;
+        setName(paramName);
+        setWeight(paramWeight);
+        setSize(size);
     }
     //endregion
 
@@ -73,7 +73,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return  "\nname='" + name + '\'' +
+        return  "\nname='" + getName() + '\'' +
                 "\nsize=" + size +
                 "\nweight=" + weight;
     }
