@@ -30,7 +30,6 @@ public class Main {
             if (a instanceof Carnivore c) {
                 c.nourir("Wagyus", 10);
             }
-            a.crier();
         }
     }
 }

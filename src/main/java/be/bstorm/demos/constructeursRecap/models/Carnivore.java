@@ -2,7 +2,7 @@ package be.bstorm.demos.constructeursRecap.models;
 
 import java.util.ArrayList;
 
-public class Carnivore extends Animal{
+public abstract class Carnivore extends Animal{
 
     //region Attributs
 
@@ -17,6 +17,7 @@ public class Carnivore extends Animal{
 //        this.estNocturne = false;
         this(name,weight,size,false);
     }
+
     //Surcharge (overload) de constructeur
     public Carnivore(String name,int weight, int size, boolean paramEstNocturne){
         super(name,weight,size);

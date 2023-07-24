@@ -1,6 +1,6 @@
 package be.bstorm.demos.constructeursRecap.models;
 
-public class Animal {
+public abstract class Animal {
 
     //region Attributs
 
@@ -65,11 +65,10 @@ public class Animal {
     // Surcharge (overload) de la methode nourir(String aliment)
     public void nourir(String aliment,int quantite){
         System.out.println(getName() + " mange " + quantite + " " + aliment);
+        this.crier();
     }
 
-    public void crier(){
-        System.out.println("Je sais pas encore ce que je suis!");
-    }
+    public abstract void crier();
 
     @Override
     public String toString() {

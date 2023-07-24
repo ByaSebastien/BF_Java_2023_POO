@@ -1,6 +1,6 @@
 package be.bstorm.demos.constructeursRecap.models;
 
-public class Herbivore extends Animal{
+public abstract class Herbivore extends Animal{
 
     //region Attributs
 
@@ -31,6 +31,7 @@ public class Herbivore extends Animal{
     //endregion
 
     //region Méthodes
+
 
     @Override
     public String toString() {
