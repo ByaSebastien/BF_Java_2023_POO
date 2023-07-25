@@ -2,6 +2,14 @@ package be.bstorm.demos.basicClass;
 
 import java.time.LocalDate;
 
+/**
+ * Mutable class that represent a person
+ * FA: Person{nom, prenom}
+ *
+ * @attribute String nom
+ *
+ * @invariant nom != null && size(nom) > 0
+ */
 public class Person {
 
     // Attribut
@@ -27,6 +35,12 @@ public class Person {
         return this.nom;
     }
 
+    /**
+     *
+     * @param String nom
+     * @throws java.security.InvalidParameterException nom == null || size(nom) <= 0
+     * @modify this.updatedAt = now()
+     */
     public void setNom(String nom) {
         if (nom.trim().equals("")) {
             return;

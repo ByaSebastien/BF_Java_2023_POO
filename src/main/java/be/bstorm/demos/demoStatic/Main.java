@@ -1,5 +1,5 @@
 package be.bstorm.demos.demoStatic;
-import static be.bstorm.demos.demoStatic.MoneyConverter.Converter.*;
+import static be.bstorm.demos.demoStatic.MoneyConverter.*;
 
 public class Main {
 
