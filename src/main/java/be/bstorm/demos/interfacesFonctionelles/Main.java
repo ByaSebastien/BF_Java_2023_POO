@@ -69,14 +69,34 @@ public class Main {
 //        resultList = filterMovie(m -> m.getId() == 2);
 //        resultList.forEach(m -> System.out.println(m));
 
+//        CarwashHelper carwashHelper = new PrepareImpl();
+//
+//        carwashHelper.execute(new Voiture("1"));
+//
+//        carwashHelper = new CarwashHelper() {
+//            @Override
+//            public void execute(Voiture v) {
+//                System.out.println("Je prepare la voiture " + v.getNumero());
+//            }
+//        };
+//
+//        carwashHelper.execute(new Voiture("1"));
+//
+//        carwashHelper = v -> System.out.println("Je prepare la voiture " + v.getNumero());
+//        carwashHelper.execute(new Voiture("1"));
+
         Scanner scanner = new Scanner(System.in);
 
         Carwash carwash = new Carwash();
         Voiture v1 = new Voiture("1");
+        Voiture v2 = new Voiture("2");
+
+        PrepareImpl prepare = new PrepareImpl();
+        prepare.execute(v2);
 
         System.out.println("Voulez vous preparer la voiture ?");
         if(scanner.nextBoolean()){
-            carwash.addSubscriber(v -> System.out.println("Je traite la voiture " + v.getNumero()));
+            carwash.addSubscriber(v -> System.out.println("Je prepare la voiture " + v1.getNumero()+ "blop: "+ v.getNumero()));
         }
         System.out.println("Voulez vous laver la voiture ?");
         if(scanner.nextBoolean()){
@@ -87,7 +107,7 @@ public class Main {
             carwash.addSubscriber(v -> System.out.println("Je finalise la voiture " + v.getNumero()));
         }
 
-        carwash.traiter(v1);
+        carwash.traiter(v2);
     }
 
     public static String mapMovie(Movie m) {

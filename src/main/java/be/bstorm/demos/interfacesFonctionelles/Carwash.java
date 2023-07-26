@@ -1,5 +1,7 @@
 package be.bstorm.demos.interfacesFonctionelles;
 
+import be.bstorm.demos.basicClass.Person;
+
 import java.util.ArrayList;
 import java.util.List;
 
