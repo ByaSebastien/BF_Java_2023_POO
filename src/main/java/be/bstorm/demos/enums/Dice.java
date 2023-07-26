@@ -3,6 +3,7 @@ package be.bstorm.demos.enums;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 public enum Dice {
 
@@ -13,7 +14,7 @@ public enum Dice {
     D100(100)
     ;
 
-    int value;
+    private int value;
     Dice(int value){
         this.value = value;
     }
@@ -37,11 +38,9 @@ public enum Dice {
             results.add(roll());
         }
         return results.stream()
-                .sorted(Integer::compareTo)
-                .limit(nbToKeep)
                 .mapToInt(i -> i)
+                .unordered()
+                .limit(nbToKeep)
                 .sum();
     }
-
-
 }

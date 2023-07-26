@@ -19,6 +19,14 @@ public class Main {
 
         p.afficher();
         p2.afficher();
+
+        Position pos = new Position(5,3);
+        pos.x();
+        pos.y();
+        pos.toString();
+
+        System.out.println(pos.hashCode() == new Position(5,3).hashCode());
+
     }
 }
 

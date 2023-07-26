@@ -26,7 +26,7 @@ public class Main {
 
         Dice dice = Dice.D6;
 
-        dice.rolls(5,3);
+        int res = dice.rolls(5,3);
 
         Dice.D100.roll();
 

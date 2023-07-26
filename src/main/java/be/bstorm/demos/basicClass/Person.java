@@ -1,6 +1,8 @@
 package be.bstorm.demos.basicClass;
 
 import java.time.LocalDate;
+import java.util.Comparator;
+import java.util.Objects;
 
 /**
  * Mutable class that represent a person
@@ -10,7 +12,7 @@ import java.time.LocalDate;
  *
  * @invariant nom != null && size(nom) > 0
  */
-public class Person {
+public class Person implements Comparator<Person> {
 
     // Attribut
     private String nom;
@@ -88,5 +90,24 @@ public class Person {
 
             return age;
         }
+    }
+
+    @Override
+    public int compare(Person o1, Person o2) {
+        return o1.getNom().compareTo(o2.getNom());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(nom, person.nom) && Objects.equals(prenom, person.prenom) && Objects.equals(ddn, person.ddn);
+//        return this.hashCode() == o.hashCode();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nom, prenom, ddn);
     }
 }
