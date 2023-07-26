@@ -8,10 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Crud crud = new CsvCrudImpl();
-        CrudFille crudFille = new CsvCrudImpl();
+        Crud crud = new DbCrudImpl();
+        Crud crudFille = new CsvCrudImpl();
 
         crud.delete(3);
+        crudFille.readAll();
+
+        crud.readAll();
         crudFille.readAll();
     }
 }
